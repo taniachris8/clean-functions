@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "webpack serve --env development",
     "test": "jest --coverage",
-    "build": "babel src -d dist",
+    "build": "webpack --env production",
     "lint": "eslint ."
   },
   "repository": {
@@ -25,11 +26,17 @@
     "@eslint/js": "^9.33.0",
     "@stylistic/eslint-plugin": "^5.2.3",
     "@stylistic/eslint-plugin-js": "^4.4.1",
-    "eslint": "^8.2.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.2",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "eslint": "^9.33.0",
     "globals": "^16.3.0",
-    "jest": "^30.0.5"
+    "html-webpack-plugin": "^5.6.3",
+    "jest": "^30.0.5",
+    "mini-css-extract-plugin": "^2.9.3",
+    "webpack": "^5.101.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2",
+    "webpack-merge": "^6.0.1"
   },
   "dependencies": {
     "core-js": "^3.45.0"

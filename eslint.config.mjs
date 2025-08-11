@@ -1,5 +1,4 @@
 import { defineConfig } from "eslint/config";
-import airbnbBase from "eslint-config-airbnb-base";
 import globals from "globals";
 
 export default defineConfig([
@@ -8,13 +7,14 @@ export default defineConfig([
   },
   {
     files: ["**/*.{js,mjs,cjs,jsx}"],
-    ...airbnbBase,
     languageOptions: {
       ecmaVersion: 2023,
       sourceType: "module",
-      globals: globals.browser,
-      ...globals.es2021, 
-      ...globals.jest, 
+      globals: {
+        ...globals.browser,
+        ...globals.es2021,
+        ...globals.jest,
+      },
     },
   },
   {
